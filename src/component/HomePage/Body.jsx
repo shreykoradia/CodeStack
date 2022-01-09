@@ -1,13 +1,16 @@
 import React from 'react'
-import './body.css'
+import {Typography} from '@material-ui/core'
 
 function Body() {
     return (
         <div>
-            <p>Building Communities for hackathons,<br />Q&A and reviews.</p>
-            <p className="banner">Join the game ! and start contributing to Community </p>
+            <Typography paragraphu={true} align="center" gutteBottom={true} variant="h6">Building Communities for hackathons,Q&A and reviews </Typography>
+            <Typography paragraphu={true} align="center" gutteBottom={true} variant="h6">Join the game ! and start contributing to Community</Typography>
         </div>
     )
 }
+
+
+   
 
 export default Body
