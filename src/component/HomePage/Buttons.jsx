@@ -21,6 +21,8 @@ const useStyles = makeStyles({
             width:'6rem',
             margin:'1rem',
             flexDirection:'row',
+            transform:'translate(500% , 250%)',
+
             
     },
 
