@@ -4,12 +4,15 @@ import {Button , makeStyles , } from '@material-ui/core'
 const styles = {
     display : "flex",
     flexDirection : "row",
-    marginTop : '5%'
+    marginTop : '5%',
+    justifyContent:'center',
+    alignItems:'center'
 }
 
 // making a hook api for styles
 const useStyles = makeStyles({
     root: {
+            // display:'flex',
             border: 0,
             background: '#212121',
             color: 'white',
@@ -19,11 +22,7 @@ const useStyles = makeStyles({
             padding: "9px 18px",
             height:'3rem',
             width:'6rem',
-            margin:'1rem',
-            flexDirection:'row',
-            transform:'translate(500% , 250%)',
-
-            
+            margin:'1rem'       
     },
 
     
