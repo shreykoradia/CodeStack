@@ -1,5 +1,6 @@
 import React from 'react'
 import {Button , makeStyles , } from '@material-ui/core'
+import {Link} from 'react-router-dom'
 
 const styles = {
     display : "flex",
@@ -33,8 +34,9 @@ function Buttons() {
     const classes = useStyles();
     return (
         <div style={styles}>   
-            <Button variant="text" href="#Login" className={classes.root}>Login</Button>
-            <Button variant="text" href="#Signup" className={classes.root}>Signup</Button>
+            <Button variant="text" component={Link} to="/login"className={classes.root}>Login</Button>
+            <Button variant="text" component={Link} to="/signup" className={classes.root}>Signup</Button>
+            
         </div>
     )
 }
