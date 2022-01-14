@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, Grid , makeStyles , Typography} from "@material-ui/core"
+import {Button, Grid , makeStyles , Typography } from "@material-ui/core"
 import {TextField} from '@material-ui/core'
 //import {FormControl} from '@material-ui/core'
 
@@ -8,6 +8,9 @@ const styles={
     justifyContent:'center',
     alignItems:'center',
     marginTop :'5%',
+    marginLeft:'2%',
+    maxWidth:'100vw',
+    flexDirection:'row'
 }
 
 const useStyles = makeStyles({
@@ -36,21 +39,6 @@ function Signup() {
     return (
         <>
         <div style={styles}>
-
-        {/* <Grid 
-            container 
-            direction ="column"
-            justifyContent='center'
-            alignItem="center"
-            >
-            <TextField label="Email" placeholder='Write your Email' type="email" variant='outlined' //ref={emailRef}
-             required /> 
-            <TextField label="Choose a password" placeholder='Write your password' type="password" variant='outlined'  //ref={emailRef}
-             required />
-            <Button variant="contained" href="#submit" color="#212121">
-                Sign up for free
-            </Button>
-            </Grid> */}
             <Grid container direction={"column"} spacing={2} justifyContent='center' alignItems='center' >
             <Grid item>
             <Typography   paragraph={false} align="left" gutterBottom={true} variant="h4" noWrap={false}>CodeStack</Typography>
@@ -70,6 +58,12 @@ function Signup() {
            <Button variant="contained" href="#submit" color={"#000000"}  size='large' className={classes.root}>
                 Sign up for free
             </Button>
+            </Grid>
+            <Grid item>
+            <Typography paragraph={false} align='left' gutterBottom={true} variant="overline" noWrap={false}>
+           ~/ A bug is never just a mistake. It represents something bigger. An error of thinking That makes you who you are. /~<br/>
+            -- Sam Esmail
+                </Typography>
             </Grid>
            </Grid>
 
