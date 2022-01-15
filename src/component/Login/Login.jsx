@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import {Button , Grid , makeStyles , Typography } from "@material-ui/core"
 import {TextField} from '@material-ui/core'
 //import {FormControl} from '@material-ui/core
@@ -7,7 +7,7 @@ const styles={
     display: 'flex',
     justifyContent:'center',
     alignItems:'center',
-    marginTop :'5%',
+    marginTop :'4%',
     marginLeft:'2%',
     maxWidth:'100vw',
     flexDirection:'row'
@@ -36,6 +36,9 @@ const useStyles = makeStyles({
 
 function Login() {
     const classes = useStyles();
+    const emailRef = useRef()
+    const passwordRef = useRef()
+
     return (
         <>
         <div style={styles}>
@@ -49,10 +52,10 @@ function Login() {
             </Typography>
              </Grid>   
             <Grid item>
-             <TextField label="Email" placeholder='Email'type="email" variant="outlined"  required  />
+             <TextField label="Email" placeholder='Email'type="email" variant="outlined" ref={emailRef} required  />
            </Grid>
            <Grid item>
-             <TextField label="Password" type="password" placeholder='Password' variant="outlined" required />
+             <TextField label="Password" type="password" placeholder='Password' variant="outlined" ref={passwordRef} required />
            </Grid>
            {/* <Grid item>
            <Checkbox
@@ -64,6 +67,9 @@ function Login() {
            <Button variant="contained" href="#submit" color={"#000000"}  size='large' className={classes.root}>
                 Login
             </Button>
+            </Grid>
+            <Grid item>
+            <Typography paragraph={false} align="center" gutterBottom={false} variant="overline" noWrap={false}>Don't have an account ? Signup</Typography>
             </Grid>
            </Grid>
 
