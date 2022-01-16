@@ -1,13 +1,16 @@
-import React from 'react'
+import React , {useRef} from 'react'
 import {Button, Grid , makeStyles , Typography } from "@material-ui/core"
 import {TextField} from '@material-ui/core'
 //import {FormControl} from '@material-ui/core'
+import { useAuth } from '../../contexts/AuthContext'
+
+
 
 const styles={
     display: 'flex',
     justifyContent:'center',
     alignItems:'center',
-    marginTop :'5%',
+    marginTop :'4%',
     marginLeft:'2%',
     maxWidth:'100vw',
     flexDirection:'row'
@@ -36,6 +39,16 @@ const useStyles = makeStyles({
 
 function Signup() {
     const classes = useStyles();
+    const emailRef = useRef()
+    const passwordRef = useRef()
+    const {signup} = useAuth()
+
+    function handleSubmit(e){
+        e.preventDefault()
+
+        signup(emailRef.current.value , passwordRef.current.value)
+    }
+
     return (
         <>
         <div style={styles}>
@@ -49,15 +62,18 @@ function Signup() {
             </Typography>
              </Grid>   
             <Grid item>
-             <TextField label="Email" placeholder='Write a Email'type="email" variant="outlined"  required  />
+             <TextField label="Email" placeholder='Write a Email'type="email" variant="outlined" ref={emailRef} required   />
            </Grid>
            <Grid item>
-             <TextField label="Choose a password" type="password" variant="outlined" required />
+             <TextField label="Choose a password" type="password" variant="outlined" ref={passwordRef} required />
            </Grid>
            <Grid item>
            <Button variant="contained" href="#submit" color={"#000000"}  size='large' className={classes.root}>
                 Sign up for free
             </Button>
+            </Grid>
+            <Grid item>
+            <Typography paragraph={false} align="center" gutterBottom={false} variant="overline" noWrap={false}>ALready have an account ? Login</Typography>
             </Grid>
             <Grid item>
             <Typography paragraph={false} align='left' gutterBottom={true} variant="overline" noWrap={false}>
