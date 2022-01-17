@@ -7,7 +7,7 @@ const styles={
     display: 'flex',
     justifyContent:'center',
     alignItems:'center',
-    marginTop :'4%',
+    marginTop :'3%',
     marginLeft:'2%',
     maxWidth:'100vw',
     flexDirection:'row'
@@ -57,19 +57,13 @@ function Login() {
            <Grid item>
              <TextField label="Password" type="password" placeholder='Password' variant="outlined" ref={passwordRef} required />
            </Grid>
-           {/* <Grid item>
-           <Checkbox
-            icon={<BookmarkBorderIcon />}
-            checkedIcon={< BookmarkIcon />}/>
-            <Typography> Remember me</Typography>
-           </Grid> */}
            <Grid item>
            <Button variant="contained" href="#submit" color={"#000000"}  size='large' className={classes.root}>
                 Login
             </Button>
             </Grid>
             <Grid item>
-            <Typography paragraph={false} align="center" gutterBottom={false} variant="overline" noWrap={false}>Don't have an account ? Signup</Typography>
+            <Typography paragraph={false} align="center" gutterBottom={true} variant="overline" noWrap={false}>Don't have an account ? Signup</Typography>
             </Grid>
            </Grid>
 

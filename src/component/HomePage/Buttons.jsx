@@ -3,12 +3,13 @@ import {Button , makeStyles , } from '@material-ui/core'
 import {Link} from 'react-router-dom'
 
 
+
 const styles = {
     display : "flex",
     flexDirection : "row",
     marginTop : '5%',
     justifyContent:'center',
-    alignItems:'center'
+    alignItems:'center',
 }
 
 // making a hook api for styles
@@ -38,7 +39,6 @@ function Buttons() {
             
             <Button variant="text" component={Link} to="/login" className={classes.root}>Login</Button>
             <Button variant="text" component={Link} to="/signup" className={classes.root}>Signup</Button>
-            
         </div>
     )
 }
