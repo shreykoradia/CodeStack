@@ -7,7 +7,6 @@ import { useAuth } from '../../contexts/AuthContext'
 import {Link} from 'react-router-dom'
 
 
-
 const styles={
     display: 'flex',
     justifyContent:'center',
@@ -44,50 +43,36 @@ function Signup() {
     const emailRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
-    const {signup} = useAuth()
-    const [error , setError] = useState('')
-    const [loading , setLoading] = useState(false)
+    const { signup } = useAuth()
+    const [error, setError] = useState("")
+    const [loading, setLoading] = useState(false)
+    // const navigate = useNavigate();
 
-    // async function handleSubmit(e){
-    //     e.preventDefault()
-
-    //         if(passwordRef.current.value !== passwordConfirmRef.current.value){
-    //             return setError('Passwords do not match ')
-    //         }
-    //         try{
-    //             setError('')
-    //             setLoading(true)
-    //             await signup(emailRef.current.value , passwordRef.current.value)
-    //         } catch {
-    //             setError('Failed to create an account')
-    //         }
-
-    // }
-
+  
     async function handleSubmit(e) {
-        e.preventDefault()
-    
-        if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-          return setError("Passwords do not match")
-        }
-    
-        try {
-          setError("")
-          setLoading(true)
-          await signup(emailRef.current.value, passwordRef.current.value)
-        //   history.push("/")
-        console.log(error); 
-        } catch {
-          setError("Failed to create an account")
-        }
-    
-        setLoading(false)
+      e.preventDefault()
+  
+      if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+        return setError("Passwords do not match")
       }
+  
+      try { 
+        setLoading(true);
+        setError("");
+        await signup(emailRef.current.value, passwordRef.current.value);
+        // navigate.push("/Dashboard")
+      } catch(err){
+        console.log(err)
+        setError("Failed to create an account")
+      }
+  
+      setLoading(false)
+    }
+  
 
     return (
         <>
-        <div style={styles}>
-            
+        <div style={styles}>  
             <Grid container direction={"column"} spacing={1} justifyContent='center' alignItems='center' >
             <Grid item>
             <Typography   paragraph={false} align="left" gutterBottom={true} variant="h4" noWrap={false}>CodeStack</Typography>
@@ -96,8 +81,8 @@ function Signup() {
              <Typography   paragraph={true} align="center" gutterBottom={true} variant="overline" noWrap={false}>
                 Join the Game with Developers, Sign up for free!
             </Typography>
-             </Grid>   
-             {error && <Alert  size="small"variant="standard" severity="error">{error}</Alert>}<br />
+             </Grid>  
+             {error && <Alert  size="small"variant="standard" severity="error">{error}</Alert>} <br /> 
              <form onSubmit={handleSubmit}>
             <Grid container direction={"column"} spacing={2} justifyContent='center' alignItems='center' >        
             <Grid item>
@@ -110,7 +95,7 @@ function Signup() {
              <TextField label="Confirm password" type="password" variant="outlined" inputRef={passwordConfirmRef} required />
            </Grid>
            <Grid item>
-           <Button variant="contained" type='submit' size='large' className={classes.root} disabled={loading}>
+           <Button variant="contained" type='submit' disabled={loading} size='large' className={classes.root}>
                 Sign up for free
             </Button>
             </Grid>

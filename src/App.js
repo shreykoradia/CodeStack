@@ -2,7 +2,7 @@ import React from 'react'
 import Homepage from './component/HomePage/Homepage'
 import { Route , Routes ,  } from 'react-router-dom'
 import Login from './component/Login/Login.jsx'
-import Signup from './component/Signup/Signup.jsx'
+import Signup from './component/Signup/Signup'
 import { AuthProvider } from './contexts/AuthContext'
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
                     <Route path="/signup"  element={<Signup />} />
                 </Routes>
                 </AuthProvider>
-                
+
         </div>
     )
 }
