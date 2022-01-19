@@ -54,7 +54,7 @@ function Login() {
         setLoading(true);
         setError("");
         await login(emailRef.current.value, passwordRef.current.value);
-        navigate("/Dashboard")
+        navigate("/dashboard")
       } catch(err){
         console.log(err)
         setError("Failed to sign in")
