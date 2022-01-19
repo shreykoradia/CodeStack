@@ -4,7 +4,7 @@ import Alert from '@material-ui/lab/Alert';
 import {TextField} from '@material-ui/core'
 //import {FormControl} from '@material-ui/core'
 import { useAuth } from '../../contexts/AuthContext'
-import {Link} from 'react-router-dom'
+import {Link , useNavigate} from 'react-router-dom'
 
 
 const styles={
@@ -46,7 +46,7 @@ function Signup() {
     const { signup } = useAuth()
     const [error, setError] = useState("")
     const [loading, setLoading] = useState(false)
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
   
     async function handleSubmit(e) {
@@ -60,7 +60,7 @@ function Signup() {
         setLoading(true);
         setError("");
         await signup(emailRef.current.value, passwordRef.current.value);
-        // navigate.push("/Dashboard")
+        navigate("/Dashboard")
       } catch(err){
         console.log(err)
         setError("Failed to create an account")

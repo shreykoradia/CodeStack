@@ -4,6 +4,7 @@ import { Route , Routes ,  } from 'react-router-dom'
 import Login from './component/Login/Login.jsx'
 import Signup from './component/Signup/Signup'
 import { AuthProvider } from './contexts/AuthContext'
+import Dashboard from './component/Dashboard/Dashboard'
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                     <Route path = "/" element={<Homepage />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/signup"  element={<Signup />} />
+                    <Route path="/Dashboard"  element={<Dashboard />} />
                 </Routes>
                 </AuthProvider>
 
