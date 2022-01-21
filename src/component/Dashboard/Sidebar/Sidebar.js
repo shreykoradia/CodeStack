@@ -1,15 +1,11 @@
 import React from 'react'
-import './sidebar.css'
-import { Typography} from '@material-ui/core'
-import Sidebaroption from './Sidebaroption'
-import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
-import ExploreRoundedIcon from '@mui/icons-material/ExploreRounded';
-import PsychologyRoundedIcon from '@mui/icons-material/PsychologyRounded';
-import CodeRoundedIcon from '@mui/icons-material/CodeRounded';
-import MoreHorizRoundedIcon from '@mui/icons-material/MoreHorizRounded';
-import AccountBoxRoundedIcon from '@mui/icons-material/AccountBoxRounded';
+import {Link} from 'react-router-dom'
+import {  Typography} from '@material-ui/core'
 import { Button } from '@material-ui/core';
-import PostAddRoundedIcon from '@mui/icons-material/PostAddRounded';
+import {FiHome , FiHash , FiUser , FiSettings , FiPlus}  from  'react-icons/fi';
+import {DiGitMerge , DiCode} from 'react-icons/di';
+import './sidebar.css'
+
 
 // // making useStyles 
 // const useStyles = makeStyles({
@@ -27,21 +23,21 @@ function Sidebar() {
     return (
         <div className='sidebar'>
             {/* CodeStack Name  */}
-            <Typography varaint="outline" className='brandname'>CodeStack</Typography>
+            <Typography variant="overline"  className='brandname'>CodeStack</Typography>
             {/* SidebarOption home  */}
-            <Sidebaroption active Icon={HomeRoundedIcon}><Button variant="text" className='sidebar-button' /></Sidebaroption>
+            <Button variant="text" className='sidebar-button' component={Link} to="/dashboard"><FiHome /></Button>
             {/* SidebarOption explore */}
-            <Sidebaroption  Icon={ExploreRoundedIcon}><Button variant="text" className='sidebar-button' /></Sidebaroption>
+            <Button variant="text" className='sidebar-button' component={Link} to="/explore"><FiHash /></Button>
             {/* SidebarOption hackathons */}
-            <Sidebaroption Icon={PsychologyRoundedIcon}><Button variant="text" className='sidebar-button' /></Sidebaroption>    
+            <Button variant="text" className='sidebar-button' component={Link} to="/hackathons"><DiGitMerge /></Button>    
             {/* SidebarOption codereview */}
-            <Sidebaroption  Icon={CodeRoundedIcon}><Button variant="text" className='sidebar-button' /></Sidebaroption>
+            <Button variant="text" className='sidebar-button' component={Link} to="/codereview"><DiCode /></Button>
             {/* SidebarOption Profile */}
-            <Sidebaroption Icon={AccountBoxRoundedIcon}><Button variant="text" className='sidebar-button' /></Sidebaroption> 
+            <Button variant="text" className='sidebar-button' component={Link} to="/profile"><FiUser/></Button>
             {/* SidebarOption more  */}
-            <Sidebaroption  Icon={MoreHorizRoundedIcon}><Button variant="text" className='sidebar-button' /></Sidebaroption>
+            <Button variant="text" className='sidebar-button' component={Link} to="/dashboard" ><FiSettings /></Button>
             {/* Button for the post  */}
-            <Sidebaroption Icon={PostAddRoundedIcon}><Button variant="text" className='sidebar-button' /></Sidebaroption>            
+            <Button variant="text" className='sidebar-button'  component={Link} to="/dashboard"><FiPlus /></Button>          
         </div>
     )
 }

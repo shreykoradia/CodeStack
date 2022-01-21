@@ -1,26 +1,15 @@
-*:focus{
-    outline: none !important;
-    background: none !important;
-}
-
-.brandname{
-    /* margin-left: 1rem !important ; */
-    text-align: left !important;
-    margin-bottom: 1rem !important;
-    font-size: 2rem !important;
-    cursor: pointer;
-}
-
 .sidebar-button{
     display: flex !important;
-    align-items: center  !important;
-    flex-direction: column !important;
+    justify-content: flex-start !important;
+    padding: 1rem !important;
+    margin-left: 10% !important;
+    font-size: 1.5rem !important;
+    max-width:fit-content !important;
     outline: none !important;
-    background-color: none !important;
-    border: none !important;
-}
 
-.sidebar-button:hover{
-    outline: none !important;
-    border: none !important;
+}
+.brandname{
+    font-size: 1.5rem !important;
+    margin-left: 1rem !important;
+    margin-bottom: 1rem !important;
 }
