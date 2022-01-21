@@ -7,6 +7,7 @@ function Dashboard() {
             {/* sidebar */}
                 <Sidebar />
             {/* feed for code-reviews */}
+            
             {/*  App documentation or widget  */}
         </>
     )
