@@ -13,3 +13,12 @@
     margin-left: 1rem !important;
     margin-bottom: 1rem !important;
 }
+
+.sidebar-button:hover{
+    background-color: transparent !important;
+}
+ .icons:hover{
+    color: #1DA1F2;
+
+}
+

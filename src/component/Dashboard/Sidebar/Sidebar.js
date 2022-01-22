@@ -1,23 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {  Typography} from '@material-ui/core'
+import {  Tooltip, Typography} from '@material-ui/core'
 import { Button } from '@material-ui/core';
 import {FiHome , FiHash , FiUser , FiSettings , FiPlus}  from  'react-icons/fi';
 import {DiGitMerge , DiCode} from 'react-icons/di';
 import './sidebar.css'
 
-
-// // making useStyles 
-// const useStyles = makeStyles({
-//     root:{
-//         position:"fixed",
-//         '&:focus':{
-//             outline:0,
-//             border:0,
-//         },
-//     }
-// })
-// sidebar function 
 
 function Sidebar() {
     return (
@@ -25,19 +13,19 @@ function Sidebar() {
             {/* CodeStack Name  */}
             <Typography variant="overline"  className='brandname'>CodeStack</Typography>
             {/* SidebarOption home  */}
-            <Button variant="text" className='sidebar-button' component={Link} to="/dashboard"><FiHome /></Button>
+            <Tooltip title="Home"><Button variant="text" className='sidebar-button' component={Link} to="/dashboard"><FiHome className='icons' /></Button></Tooltip>
             {/* SidebarOption explore */}
-            <Button variant="text" className='sidebar-button' component={Link} to="/explore"><FiHash /></Button>
+            <Tooltip title="Explore"><Button variant="text" className='sidebar-button' component={Link} to="/explore"><FiHash className='icons' /></Button></Tooltip>
             {/* SidebarOption hackathons */}
-            <Button variant="text" className='sidebar-button' component={Link} to="/hackathons"><DiGitMerge /></Button>    
+            <Tooltip title="Hackathons"><Button variant="text" className='sidebar-button' component={Link} to="/hackathons"><DiGitMerge className='icons' /></Button></Tooltip>    
             {/* SidebarOption codereview */}
-            <Button variant="text" className='sidebar-button' component={Link} to="/codereview"><DiCode /></Button>
+            <Tooltip title="Code-Review"><Button variant="text" className='sidebar-button' component={Link} to="/codereview"><DiCode className='icons' /></Button></Tooltip>
             {/* SidebarOption Profile */}
-            <Button variant="text" className='sidebar-button' component={Link} to="/profile"><FiUser/></Button>
+            <Tooltip title="Profile"><Button variant="text" className='sidebar-button' component={Link} to="/profile"><FiUser className='icons' /></Button></Tooltip>
             {/* SidebarOption more  */}
-            <Button variant="text" className='sidebar-button' component={Link} to="/dashboard" ><FiSettings /></Button>
+            <Tooltip title="More"><Button variant="text" className='sidebar-button' component={Link} to="/dashboard" ><FiSettings className='icons' /></Button></Tooltip>
             {/* Button for the post  */}
-            <Button variant="text" className='sidebar-button'  component={Link} to="/dashboard"><FiPlus /></Button>          
+            <Tooltip title="Post Q&A"><Button variant="text" className='sidebar-button'  component={Link} to="/dashboard"><FiPlus className='icons' /></Button></Tooltip>          
         </div>
     )
 }
