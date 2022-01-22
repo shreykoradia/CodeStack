@@ -23,7 +23,7 @@ function Sidebar() {
             {/* SidebarOption Profile */}
             <Tooltip title="Profile"><Button variant="text" className='sidebar-button' component={Link} to="/profile"><FiUser className='icons' /></Button></Tooltip>
             {/* SidebarOption more  */}
-            <Tooltip title="More"><Button variant="text" className='sidebar-button' component={Link} to="/dashboard" ><FiSettings className='icons' /></Button></Tooltip>
+            <Tooltip title="Settings"><Button variant="text" className='sidebar-button' component={Link} to="/dashboard" ><FiSettings className='icons' /></Button></Tooltip>
             {/* Button for the post  */}
             <Tooltip title="Post Q&A"><Button variant="text" className='sidebar-button'  component={Link} to="/dashboard"><FiPlus className='icons' /></Button></Tooltip>          
         </div>

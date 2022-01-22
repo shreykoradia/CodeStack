@@ -1,0 +1,16 @@
+.feed{
+    flex: 0.7;
+    border-right: 1px solid whitesmoke;
+    overflow-y: scroll;
+    /* scrollbar-3dlight-color: aliceblue; */
+}
+
+.header{
+
+    position: sticky;
+    top: 0;
+    /* background-color: white; */
+    z-index: 100;
+    border:1px solid none ;
+    padding: 1rem 2rem;
+}
