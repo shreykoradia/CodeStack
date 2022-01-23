@@ -25,7 +25,7 @@ function Sidebar() {
             {/* SidebarOption more  */}
             <Tooltip title="Settings"><Button variant="text" className='sidebar-button' component={Link} to="/dashboard" ><FiSettings className='icons' /></Button></Tooltip>
             {/* Button for the post  */}
-            <Tooltip title="Post Q&A"><Button variant="text" className='sidebar-button'  component={Link} to="/dashboard"><FiPlus className='icons' /></Button></Tooltip>          
+            <Tooltip title="Post"><Button variant="text" className='sidebar-button'  component={Link} to="/dashboard"><FiPlus className='icons' /></Button></Tooltip>          
         </div>
     )
 }

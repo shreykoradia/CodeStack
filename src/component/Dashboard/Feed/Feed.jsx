@@ -8,13 +8,14 @@ function Feed() {
     <div className="feed">
     {/* header */}
     <div className="header">
-    <Typography   paragraph={false} align="left" gutterBottom={true} variant="overline" noWrap={false}>Home</Typography>
+    <Typography paragraph={false} align="left" gutterBottom={true} variant="overline" noWrap={false}>Home</Typography>
     </div>
 
     {/* Post box for Q&A */}
 
 
     {/* Posts  */}
+      <h5>THis section has post exactly like reddits</h5>
     {/* Posts  */}
     {/* Posts  */}
     {/* Posts  */}
